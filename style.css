@@ -1,0 +1,357 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: radial-gradient(circle, rgba(255, 138, 187, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+
+h1 {
+    background-color: rgb(78, 87, 219);
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: "Fredericka the Great", serif;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    background: #ca45ff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    margin: 20px 0 15px 0;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #460096;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 30px auto;
+    justify-items: center;
+    text-align: center;
+}
+
+/* Conteneurs d'images */
+.nyancat,
+.aquarelle,
+.ciel,
+.moss,
+.vinny,
+.rex,
+.haiko,
+.sans,
+.collège,
+.stimmy,
+.stolas,
+.catnap {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* Style pour les cartes d'images */
+.image-card {
+    width: 100%;
+    max-width: 380px;
+}
+
+
+figure {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Images */
+img {
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+
+figcaption {
+    color: #2d0052;
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+figcaption strong {
+    color: #460096;
+    font-size: 1.1rem;
+}
+
+/* Formulaire */
+form {
+    background-color: rgba(236, 189, 255, 0.74);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px 0;
+    color: #460096;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="comment"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 2px solid #ca45ff;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: rgb(78, 87, 219);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5a65d8;
+    transform: scale(1.05);
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Section de prévisualisation */
+#preview-section {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#preview-section h3 {
+    color: #460096;
+    margin-bottom: 15px;
+}
+
+#preview-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#preview-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background-color: rgb(78, 87, 219);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 40px;
+    }
+
+    .nyancat,
+    .aquarelle,
+    .ciel,
+    .moss,
+    .vinny,
+    .rex,
+    .haiko,
+    .sans,
+    .collège,
+    .stimmy,
+    .stolas,
+    .catnap {
+        margin: 20px 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        max-width: 1400px;
+    }
+}
+
+/* Styles pour le zoom */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox-close:hover {
+    color: #ff8abb;
+}
+
+.lightbox-caption {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #460096;
+    max-width: 600px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.lightbox-caption strong {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.lightbox-caption p {
+    margin: 10px 0;
+    background: none;
+    padding: 0;
+}
+
+.lightbox-caption small {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}

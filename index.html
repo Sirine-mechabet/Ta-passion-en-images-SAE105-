@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma passion en images</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <h1>Ma passion en images</h1>
+    <h2>J'ai choisi de présenter pour ce projet une de mes nombreuses passions qui me tient beaucoup à cœur : le dessin
+      !</h2>
+    <p>Dès petite, je dessinais déjà avec plusieurs techniques différentes comme le feutre à alcool, l'aquarelle, le
+      crayon ou encore sur ma petite tablette.</p>
+
+    <h2>En voici quelques exemples :</h2>
+    <div id="gallery-enfance" class="gallery"></div>
+
+    <p>J'ai pu me faire pleins d'amis autour de ma passion. Je participe notamment à un évènement annuel international
+      appelé "ArtFight" où chaque participant doit combattre en équipe à l'aide de dessins envoyés aux adversaires sur
+      le site internet de l'ArtFight. L'équipe gagnante est celle ayant fait le plus de points pendant toute la durée de
+      l'évènement.</p>
+
+    <h2>Voici quelques exemples de mes attaques de l'année 2025:</h2>
+    <div id="gallery-artfight" class="gallery"></div>
+
+    <p>Le dessin, avant d'être un hobby, est une discipline qui demande de la pratique, de la rigueur et de la curiosité
+      pour être perfectionné. Je n'ai jamais pris aucun cours, j'ai donc tout appris de moi-même en autodidacte. Il y a
+      eu beaucoup de fois où j'ai été frustré de ne pas voir mes progrès (encore aujourd'hui j'ai du mal à apprécier
+      pleinement mon travail) mais cela ne m'a pas arrêté pour autant, au contraire ! L'envie de voir mes progrès m'a
+      donné la persévérance de continuer et je peux être très fier de mon niveau aujourd'hui.</p>
+
+    <h2>Pour finir, voici quelques photos de mes anciens dessins...</h2>
+    <div id="gallery-anciens" class="gallery"></div>
+
+    <h2>...Et de mes dessins les plus récents !</h2>
+    <div id="gallery-recents" class="gallery"></div>
+
+    <h2>Et toi ? y'a-t-il un dessin dont tu es fier ? Partage le ici !</h2>
+
+    <form id="contribution-form">
+      <label for="url-source">URL de l'image *</label>
+      <input type="url" id="url-source" placeholder="https://exemple.com/mon-image.jpg" required>
+
+      <label for="titre">Titre du dessin *</label>
+      <input type="text" id="titre" placeholder="Mon dessin préféré" required>
+
+      <label for="description">Description *</label>
+      <textarea id="description" placeholder="Décris ton dessin et ce qu'il représente pour toi..." required></textarea>
+
+      <label for="auteur">Ton nom (pour le copyright) *</label>
+      <input type="text" id="auteur" placeholder="Ton nom" required>
+
+      <input type="submit" value="Prévisualiser mon dessin">
+    </form>
+
+    <!-- Section de prévisualisation -->
+    <div id="preview-section" style="display: none;">
+      <h3>Aperçu de ton dessin</h3>
+      <div id="preview-container"></div>
+      <button type="button" id="confirm-btn"
+        style="background-color: #28a745; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: bold; margin: 10px 5px;">
+        Confirmer et ajouter
+      </button>
+      <button type="button" id="cancel-btn"
+        style="background-color: #dc3545; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: bold; margin: 10px 5px;">
+        Annuler
+      </button>
+    </div>
+
+    <!-- Galerie des contributions -->
+    <div id="gallery-contributions-container" style="display: none;">
+      <h2>Vos dessins !</h2>
+      <div id="gallery-contributions" class="gallery"></div>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+<footer>
+  <strong>- Mentions légales -</strong><br>
+  MECHABET Sirine <br>
+  6 allée Charles de Foucauld <br>
+  93160 NOISY LE GRAND <br>
+  07 66 38 66 82 <br>
+  Propriété intellectuelle des images: <a href="https://www.instagram.com/rin_oshield8?igsh=MWd1bHVlN2Ywbjg0NQ==">©
+    Mechabet Sirine</a> <br> <br>
+  <strong>Mentions relatives à l'hébergeur du site :</strong><br>
+  <a href=" https://www.o2switch.fr">o2switch</a>
+  Chem. des Pardiaux, 63000 Clermont-Ferrand, France
+  04 44 44 60 40
+</footer>
+</html>
